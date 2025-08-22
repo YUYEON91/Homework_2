@@ -3,12 +3,14 @@
 #include "Player.h"
 using namespace std;
 
+class Player;
+
 class Monster
 {
 public:
-		Monster(string name);
+	Monster(string name);
 
-		void attack();
+	virtual void attack(Player* player) = 0;
 
     //몬스터 get함수
 	string getName();

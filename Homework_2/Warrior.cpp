@@ -5,19 +5,17 @@ using namespace std;
 Warrior::Warrior()
 {
 	job_name = "전사";
-	HP += 80;
-	power += 10;
+	HP += 50;
+	power += 20;
 	defence += 5;
 }
-
-
 
 Warrior::Warrior(string nickname)
 {
 	job_name = "전사";
 	setNickname(nickname);
-	HP += 80;
-	power += 10;
+	HP += 50;
+	power += 20;
 	defence += 5;
 }
 
@@ -35,7 +33,10 @@ void Warrior::attack(Monster* monster)
 	}
 	int damage = max(1, power - monster->getDefence());
 
-	cout << monster->getName() << "에게" << damage << "의 데미지를 입혔습니다" << endl;
+    for (int i = 0; i < 3; i++) 
+	{
+	cout << monster->getName() << "에게 " << damage << "의 데미지를 입혔습니다" << endl;
+    }
 
 	int monsterHP = monster->getHP() - damage;
 	if (monster->setHP(monsterHP))

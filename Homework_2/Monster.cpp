@@ -10,15 +10,14 @@ Monster::Monster()
     defence = 10;
     speed = 10;
 }
-void attack()
 
 Monster::Monster(string name)
 {
-    this->name = name;
-    HP = 10;
-    power = 30;
-    defence = 10;
-    speed = 10;
+    this->name = "몬스터";
+    this->HP = 10;
+    this->power = 30;
+    this->defence = 10;
+    this->speed = 10;
 }
 
 void Monster::attack(Player* player)
@@ -31,9 +30,14 @@ void Monster::attack(Player* player)
 
     int damage = max(1, power - player->getDefence());
 
+    if (HP <= 0)
+    {
+        return;
+    }
+
     cout << player->getNickname() << "에게 " << damage << "의 데미지를 입혔습니다." << endl;
     int playerHP = player->getHP() - damage;
-    if (Player->setHP(PlayerHP))
+    if (player->setHP(playerHP))
     {
         cout << "플레이어의 체력이 " << player->getHP() << " 가 남았습니다." << endl;
     }
@@ -61,15 +65,15 @@ int Monster::getDefence()
 { 
     return defence; 
 }
-int Monster::getSpeed() 
-{ 
-    return speed; 
-
+int Monster::getSpeed()
+{
+    return speed;
+}
 
 // Setter 함수들
 void Monster::setName(string name)
 {
-    this->naem = name;
+        this->name = name;
 }
 
 bool Monster::setHP(int HP) 

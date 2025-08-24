@@ -7,7 +7,7 @@ Magician::Magician()
 	job_name = "¸¶¹ý»ç";
 	HP += 50;
 	MP += 30;
-	power += 10;
+	power += 30;
 	defence += 5;
 	
 }
@@ -18,7 +18,7 @@ Magician::Magician(string nickname)
 	setNickname(nickname);
 	HP += 50;
 	MP += 30;
-	power += 10;
+	power += 30;
 	defence += 5;
 }
 

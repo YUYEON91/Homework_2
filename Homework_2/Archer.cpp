@@ -6,7 +6,7 @@ Archer::Archer()
 {
 	job_name = "±Ã¼ö";
 	HP += 50;
-	power += 10;
+	power += 20;
 	defence += 5;
 	accuracy = 80;
 }
@@ -16,7 +16,7 @@ Archer::Archer(string nickname)
 	job_name = "±Ã¼ö";
 	setNickname(nickname);
 	HP += 50;
-	power += 10;
+	power += 20;
 	defence += 5;
 	accuracy = 80;
 }

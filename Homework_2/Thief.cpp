@@ -6,7 +6,7 @@ Thief::Thief()
 {
 	job_name = "도적";
 	HP += 50;
-	power += 10;
+	power += 15;
 	defence += 5;
 	speed += 80;
 }
@@ -16,7 +16,7 @@ Thief::Thief(string nickname)
 	job_name = "도적";
 	setNickname(nickname);
 	HP += 50;
-	power += 10;
+	power += 15;
 	defence += 5;
 	speed += 80;
 }

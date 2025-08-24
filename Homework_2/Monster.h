@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include "Player.h"
+
 using namespace std;
 
 class Player;
@@ -8,9 +9,10 @@ class Player;
 class Monster
 {
 public:
+	Monster();
 	Monster(string name);
 
-	virtual void attack(Player* player) = 0;
+	virtual void attack(Player* player);
 
     //몬스터 get함수
 	string getName();
@@ -27,6 +29,7 @@ public:
 	void setSpeed(int speed);
 
 protected:
+	//attributes
 	string name; //몬스터의 이름
 	int HP; //몬스터의 체력
 	int power; //몬스터의 공격력

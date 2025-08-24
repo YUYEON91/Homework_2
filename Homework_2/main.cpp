@@ -4,6 +4,8 @@
 #include "Magician.h"
 #include "Thief.h"
 #include "Archer.h"
+#include "Monster.h"
+
 using namespace std;
 
 int main()
@@ -51,13 +53,25 @@ int main()
 		return 1;
 	}
 
-	player->attack();
 	player->printPlayerStatus();
 
+	cout << "몬스터가 생성됩니다." << endl;
+	Monster* monster = new Monster();
+
+	player->attack(monster);
+	monster->attack(player);
+
 	delete player;
+	delete monster;
+
+
+	// Monster 객체 생성 및 attack 호출
+	/*
+	Monster* monster = new Monster("고블린", 10, 5, 3); // 예시 생성자, Monster.h에 맞게 수정
+	player->attack(monster);
+	*/
 
 	return 0;
-
 }
 
 

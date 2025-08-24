@@ -1,6 +1,5 @@
 #pragma once
 #include <string>
-#include "Monster.h"
 using namespace std;
 
 class Monster;
@@ -8,6 +7,7 @@ class Monster;
 class Player 
 {
 public:
+	Player();
 	Player(string nickname);
 
 	virtual void attack() = 0;
